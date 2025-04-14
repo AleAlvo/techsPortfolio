@@ -1,10 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
-// Components
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
-// Pages
 import Home from "./pages/Home";
 import DataFetching from "./pages/DataFetching";
 import DataFiltering from "./pages/DataFiltering";
@@ -14,9 +8,8 @@ import NotFound from "./pages/NotFound";
 
 function App() {
 	return (
-		<div className="min-h-screen flex flex-col">
-			<Navbar />
-			<main className="flex-grow">
+		<div>
+			<main>
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/data-fetching" element={<DataFetching />} />
@@ -26,7 +19,6 @@ function App() {
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</main>
-			<Footer />
 		</div>
 	);
 }
